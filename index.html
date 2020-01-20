@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOMAĆI ZADACI - ALEKSANDROV IT POLIGON </title>
+	<meta charset="UTF-8"> 
+	<style>
+     p{background-color:#9999dd;color:#000000;height:50px;font-size:14pt;font-weight:bold;}
+     div{background-color:#440099;color:#ffffff;height:50px;font-size:16pt;}
+	</style>	
+	<script type="text/javascript">
+		function fun01(){
+		 txt="";	
+		 for (var rb =1; rb<6;rb++) {
+		 	txt=txt+rb.toString()+" ";
+		 	}	
+		 document.getElementsByTagName('div')[0].innerHTML=txt;	
+		}
+
+		function fun02(){
+		 txt="";
+		 rb=4	
+		 while(rb<9) {
+		 	txt=txt+rb.toString()+" ";
+		    rb++;
+		 }	
+		 document.getElementsByTagName('div')[1].innerHTML=txt;	
+		}
+
+		function fun03(){
+		 txt="";
+		 rb=8	
+		 do {
+		 	txt=txt+rb.toString()+" ";
+		 	rb++;
+		 } while(rb<17)	
+		 document.getElementsByTagName('div')[2].innerHTML=txt;	
+		}
+
+		function fun04(){
+		 txt="";
+		 rb=8	
+		 do {
+		 	txt=txt+rb.toString()+" ";
+		 	rb--;
+		 } while(rb>2)	
+		 document.getElementsByTagName('div')[4].innerHTML=txt;	
+		}
+
+		function fun05(){
+		 txt="";	
+		 for (var rb =10; rb>5;rb--) {
+		 	txt=txt+rb.toString()+" ";
+		 	}	
+		 document.getElementsByTagName('div')[5].innerHTML=txt;	
+		}
+
+		function fun06(){
+		 txt="";
+		 sum=0;	
+		 for (var rb =1; rb<6;rb++) {
+		 	znk=(rb < 5) ? "+":"=";
+		 	txt=txt+rb.toString()+znk;
+		 	sum=sum+rb;
+		 	}
+		 	txt=txt+sum.toString();	
+		 document.getElementsByTagName('div')[6].innerHTML=txt;	
+		}
+
+		function fun07(){
+		 txt="";
+		 rb=1;
+		 sum=0;	
+		 do {
+			znk=(rb < 5) ? "+":"=";
+			dbrb=rb*2;
+		 	txt=txt+dbrb.toString()+znk;
+		 	sum=sum+dbrb;
+		 	rb++
+		 } while(rb<6)	
+		 	txt=txt+sum.toString();	
+		 document.getElementsByTagName('div')[7].innerHTML=txt;	
+		}
+
+		function fun08(){
+		 txt="";
+		 rb=1	
+		 sum=0;	
+		 for (var rb =1; rb<51;rb++) {
+		    if(rb%2==0){  
+    			znk=(rb < 20) ? "+":"=";
+		    	txt=txt+rb.toString()+znk;
+		 	    sum=sum+rb;
+		    }
+		 }	
+		 	txt=txt+sum.toString();	
+		 document.getElementsByTagName('div')[9].innerHTML=txt;	
+		}
+		
+		function fun09(){
+		 txt="";
+		 sum=0;	
+		 for (var rb =1; rb<51;rb++) {
+		    if(rb%2==0){  
+  		 	    sum++;
+		    }
+		 }	
+		 txt="Ukupan broj parnih brojeva od 1 to 50 je "+sum.toString();	
+		 document.getElementsByTagName('div')[10].innerHTML=txt;	
+		}
+
+		function fun10(){
+		 txt="";
+		 sum=0;
+		 rb=1	
+		 while(rb<51) {
+		 	sum=sum+rb;
+		    rb++;
+		 }	
+		 arits=sum/50;
+    	 txt="Aritmetička sredina prirodnih parnih brojeva od 1 to 50 je "+arits.toString();	
+		 document.getElementsByTagName('div')[12].innerHTML=txt;	
+		}
+
+		function unos01(){
+	      vrednostK=parseInt(document.getElementsByName('txt1')[0].value);
+	      vrednostN=parseInt(document.getElementsByName('txt1')[1].value);
+	      if(isNaN(vrednostK) ||  isNaN(vrednostN)){
+
+            alert("Unesite cele broje od 1 do 100"); 
+	      }
+	      else{
+	      	if(vrednostK>=vrednostN){
+              alert("K mora biti veći od N"); 
+	      	}
+	      	else{
+				txt="";
+			 	for (var rb =vrednostK; rb<vrednostN+1;rb++) {
+    				rb3=rb*3;
+		    		txt=txt+rb3.toString()+" ";
+			 	}	
+		 		document.getElementsByTagName('div')[3].innerHTML=document.getElementsByTagName('div')[3].innerHTML+"<br>"+txt;
+	      	}
+	      }
+		}
+		
+		function unos02(){
+	      vrednostN=parseInt(document.getElementsByName('txt1')[2].value);
+	      if(isNaN(vrednostN)){
+            alert("Unesite cele broje od 1 do 100"); 
+	      }
+	      else{
+				txt="";
+				sum=0
+			 	for (var rb =1; rb<vrednostN+1;rb++) {
+    			znk=(rb < vrednostN) ? "+":"=";
+			 	txt=txt+rb.toString()+znk;
+		 		sum=sum+rb;
+			 	}	
+			 	txt=txt+sum.toString();
+		 		document.getElementsByTagName('div')[8].innerHTML=document.getElementsByTagName('div')[8].innerHTML+"<br>"+txt;
+	      }
+		}
+
+		function unos03(){
+	      vrednostN=parseInt(document.getElementsByName('txt1')[3].value);
+	      vrednostK=parseInt(document.getElementsByName('txt1')[4].value);
+	      if(isNaN(vrednostK) ||  isNaN(vrednostN)){
+            alert("Unesite cele broje od 1 do 100"); 
+	      }
+	      else{
+	      	if(vrednostN>=vrednostK){
+              alert("K mora biti veći od N"); 
+	      	}
+	      	else{
+				txt="";
+				sum=0;
+			 	for (var rb=vrednostN; rb<vrednostK+1;rb++) {
+				    if(rb%2==1){  
+		 	    		sum++;
+		    		}
+			 	}	
+		 		document.getElementsByTagName('div')[11].innerHTML=document.getElementsByTagName('div')[11].innerHTML+"<br>Ukupan broj neparnih brojeva je "+sum.toString();
+	      	}
+	      }
+		}
+
+
+		function unos04(){
+	      vrednostK=parseInt(document.getElementsByName('txt1')[5].value);
+	      vrednostN=parseInt(document.getElementsByName('txt1')[6].value);
+	      if(isNaN(vrednostK) ||  isNaN(vrednostN)){
+
+            alert("Unesite cele broje od 1 do 100"); 
+	      }
+	      else{
+	      	if(vrednostK>=vrednostN){
+              alert("K mora biti veći od N"); 
+	      	}
+	      	else{
+				txt="";
+				sum=0;rbr=0;
+			 	for (var rb =vrednostK; rb<vrednostN+1;rb++) {
+			 		sum=sum+rb;
+			 		rbr++;
+			 	}	
+			 	arits=sum/rbr;
+		 		document.getElementsByTagName('div')[13].innerHTML=document.getElementsByTagName('div')[13].innerHTML+"<br>Aritmetička sredina brojeva izmedju "+vrednostK+" i "+vrednostN+" je "+arits.toString();
+	      	}
+	      }
+		}
+
+		function unos05(){
+	      vrednostK=parseInt(document.getElementsByName('txt1')[7].value);
+	      vrednostN=parseInt(document.getElementsByName('txt1')[8].value);
+	      if(isNaN(vrednostK) ||  isNaN(vrednostN)){
+
+            alert("Unesite cele broje od 1 do 100"); 
+	      }
+	      else{
+	      	if(vrednostK>=vrednostN){
+              alert("K mora biti veći od N"); 
+	      	}
+	      	else{
+				txt="";
+				sum=0;rbr=0;
+			 	for (var rb =vrednostK; rb<vrednostN+1;rb++) {
+			 		if(rb%2==0){
+			 		   sum=sum+rb;
+			 		   rbr++
+			 		}
+			 	}	
+			 	arits=sum/rbr;
+		 		document.getElementsByTagName('div')[14].innerHTML=document.getElementsByTagName('div')[14].innerHTML+"<br>Aritmetička sredina parnih brojeva izmedju "+vrednostK+" i "+vrednostN+" je "+arits.toString();
+	      	}
+	      }
+		}
+
+	</script>
+</head>
+<body>
+<h1>DOMAĆI ZADACI - JS SA HTML I CSS</h1>	
+<p>1) Ispisati prirodne brojeve od 1 do 5. <input type="button" value="POKRENI" onclick="fun01()"></p>
+<div></div>
+<p>2) Ispisati prirodne brojeve od 4 do 8. <input type="button" value="POKRENI" onclick="fun02()"></p>
+<div></div>
+
+<p>3) Ispisati prirodne brojeve od 8 do 16. <input type="button" value="POKRENI" onclick="fun03()"></p>
+<div></div>
+
+<p>4) Ispisati trostruke vrednosti prirodnih brojeva od k do n , k i n zahtevati od korisnika kao unos
+sa tastature.</p>
+<div>
+ <a>Početna vrednost K</a><input type="text" name="txt1"><a> Krajnja vrednost N</a><input type="text" name="txt1"><input type="button" value="POKRENI" onclick="unos01()">
+</div>
+
+<p>5) Ispisati prirodne brojeve od 3 do 8 unazad.<input type="button" value="POKRENI" onclick="fun04()"></p>
+<div></div>
+
+<p>6) Ispisati prirodne brojeve od 10 do 6 unazad.<input type="button" value="POKRENI" onclick="fun05()"></p>
+<div></div>
+
+<p>7) Izračunati sumu prvih 5 prirodnih brojeva , i zatim ispisati kolika je suma.<input type="button" value="POKRENI" onclick="fun06()"></p>
+<div></div>
+
+<p>8) Izračunati sumu dvostruke vrednosti prvih 5 prirodnih brojeva , i zatim ispisati sumu.<input type="button" value="POKRENI" onclick="fun07()"></p>
+<div></div>
+
+<p>9) Zahtevati od korisnika unos broja n , i zatim izračunati i ispisatu sumu prirodnih brojeva do tog
+broja.</p>
+<div>
+ <a>Vrednost N</a><input type="text" name="txt1"> <input type="button" value="POKRENI" onclick="unos02()">	
+</div>
+
+<p>10) Izračunati sumu prvih 20 prirodnih brojeva koji su parni i zatim ispisati vrednost sume. <input type="button" value="POKRENI" onclick="fun08()"></p>
+<div></div>
+
+<p>11) Potrebno je prebrojati sve parne brojeve do broja 50 i ispisati koliko tih brojeva ima.<input type="button" value="POKRENI" onclick="fun09()"></p>
+<div></div>
+
+<p>12) Zahtevati unos broja n i k od korisnika i prebrojati sve neparne brojeve od n do k i ispisati taj
+broj.</p>
+<div> <a>Početna vrednost N</a><input type="text" name="txt1"><a> Krajnja vrednost K</a><input type="text" name="txt1"><input type="button" value="POKRENI" onclick="unos03()">
+</div>
+
+<p>13) Izračunati aritmetičku sredinu prvih 50 brojeva i zatim ispisati tu vrednost.<input type="button" value="POKRENI" onclick="fun10()"></p>
+<div></div>
+
+<p>14) Zahtevati unos dva broja od korisnika i izračunati aritmetičku sredinu brojeva između dva
+uneta broja.</p>
+<div> <a>Početna vrednost K</a><input type="text" name="txt1"><a> Krajnja vrednost N</a><input type="text" name="txt1"><input type="button" value="POKRENI" onclick="unos04()"></div>
+
+<p>15) Zahtevati unos dva broja od korisnika i izračunati aritmetičku sredinu samo parnih brojeva
+između dva uneta broja.</p>
+<div><a>Početna vrednost K</a><input type="text" name="txt1"><a> Krajnja vrednost N</a><input type="text" name="txt1"><input type="button" value="POKRENI" onclick="unos05()"></div>
+
+</body>
+</html>
